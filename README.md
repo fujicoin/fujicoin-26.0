@@ -24,10 +24,6 @@ How to Build
 
 [GUIX BUILD(Linux, Windows, OSX)](./contrib/guix/README.md) - Recommended
 
-[UNIX BUILD](./doc/build-unix.md)
-
-[WINDOWS BUILD](./doc/build-windows.md)
-
 Signet network
 --------------
 Please refer to the following page for how to set up your own Signet network.
