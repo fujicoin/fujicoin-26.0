@@ -7,7 +7,7 @@ This release include German, Spanish, Spanish-Castilian, Norwegian and Dutch tra
 https://www.transifex.net/projects/p/bitcoin/
 
 Please report bugs using the issue tracker at github:
-https://github.com/bitcoin/bitcoin/issues
+https://github.com/fujicoin/fujicoin/issues
 
 For Ubuntu users, there is a new ppa maintained by Matt Corallo which you can add to your system so that it will automatically keep fujicoin up-to-date.  Just type "sudo apt-add-repository ppa:fujicoin/fujicoin" in your terminal, then install the fujicoin-qt package.
 

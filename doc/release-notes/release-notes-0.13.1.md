@@ -1,6 +1,6 @@
 Fujicoin Core version 0.13.1 is now available from:
 
-  <https://fujicoin.org/bin/fujicoin-core-0.13.1/>
+  <https://bitcoin.org/bin/bitcoin-core-0.13.1/>
 
 This is a new minor version release, including activation parameters for the
 segwit softfork, various bugfixes and performance improvements, as well as
@@ -12,7 +12,7 @@ Please report bugs using the issue tracker at github:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://fujicoincore.org/en/list/announcements/join/>
+  <https://bitcoincore.org/en/list/announcements/join/>
 
 Compatibility
 ==============
@@ -159,13 +159,13 @@ For more information about segwit, please see the [segwit FAQ][], the
 operator, please see the [versionbits FAQ][] for information about
 signaling support for a soft fork.
 
-[Segwit FAQ]: https://fujicoincore.org/en/2016/01/26/segwit-benefits/
-[segwit wallet developers guide]: https://fujicoincore.org/en/segwit_wallet_dev/
-[BIP141]: https://github.com/fujicoin/bips/blob/master/bip-0141.mediawiki
-[BIP143]: https://github.com/fujicoin/bips/blob/master/bip-0143.mediawiki
-[BIP144]: https://github.com/fujicoin/bips/blob/master/bip-0144.mediawiki
-[BIP145]: https://github.com/fujicoin/bips/blob/master/bip-0145.mediawiki
-[versionbits FAQ]: https://fujicoincore.org/en/2016/06/08/version-bits-miners-faq/
+[Segwit FAQ]: https://bitcoincore.org/en/2016/01/26/segwit-benefits/
+[segwit wallet developers guide]: https://bitcoincore.org/en/segwit_wallet_dev/
+[BIP141]: https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki
+[BIP143]: https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki
+[BIP144]: https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki
+[BIP145]: https://github.com/bitcoin/bips/blob/master/bip-0145.mediawiki
+[versionbits FAQ]: https://bitcoincore.org/en/2016/06/08/version-bits-miners-faq/
 
 
 Null dummy soft fork
@@ -196,7 +196,7 @@ as segwit.
 
 For more information, please see [BIP147][].
 
-[BIP147]: https://github.com/fujicoin/bips/blob/master/bip-0147.mediawiki
+[BIP147]: https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki
 
 Low-level RPC changes
 ---------------------
@@ -407,4 +407,4 @@ Thanks to everyone who directly contributed to this release:
 - whythat
 - Wladimir J. van der Laan
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/fujicoin/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
