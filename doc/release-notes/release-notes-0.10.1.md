@@ -1,6 +1,6 @@
 Fujicoin Core version 0.10.1 is now available from:
 
-  <https://fujicoin.org/bin/fujicoin-core-0.10.1/>
+  <https://bitcoin.org/bin/bitcoin-core-0.10.1/>
 
 This is a new minor version release, bringing bug fixes and translation 
 updates. It is recommended to upgrade to this version.
@@ -140,4 +140,4 @@ And all those who contributed additional code review and/or security research:
 - Sergio Demian Lerner
 - Sharon Goldberg
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/fujicoin/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).

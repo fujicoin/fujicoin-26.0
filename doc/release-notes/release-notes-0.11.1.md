@@ -1,6 +1,6 @@
 Fujicoin Core version 0.11.1 is now available from:
 
-  <https://fujicoin.org/bin/fujicoin-core-0.11.1/>
+  <https://bitcoin.org/bin/bitcoin-core-0.11.1/>
 
 This is a new minor version release, bringing security fixes. It is recommended
 to upgrade to this version as soon as possible.
@@ -168,5 +168,5 @@ And those who contributed additional code review and/or security research:
 - timothy on IRC for reporting the issue
 - Vulnerability in miniupnp discovered by Aleksandar Nikolic of Cisco Talos
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/fujicoin/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).
 

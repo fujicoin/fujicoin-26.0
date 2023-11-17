@@ -1,6 +1,6 @@
 Fujicoin Core version 0.11.2 is now available from:
 
-  <https://fujicoin.org/bin/fujicoin-core-0.11.2/>
+  <https://bitcoin.org/bin/bitcoin-core-0.11.2/>
 
 This is a new minor version release, bringing bug fixes, the BIP65
 (CLTV) consensus change, and relay policy preparation for BIP113. It is
@@ -95,7 +95,7 @@ version 0.4.3 or any version from 0.5.2 onward.
   will affect you at the pool operator’s discretion, which must be no
   later than BIP65 achieving its 951/1001 status.
 
-[BIP65]: https://github.com/fujicoin/bips/blob/master/bip-0065.mediawiki
+[BIP65]: https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki
 
 BIP113 mempool-only locktime enforcement using GetMedianTimePast()
 ----------------------------------------------------------------
@@ -143,7 +143,7 @@ forward. To compensate, subtract one hour (3,600 seconds) from your
 locktimes to allow those transactions to be included in mempools at
 approximately the expected time.
 
-[BIP113]: https://github.com/fujicoin/bips/blob/master/bip-0113.mediawiki
+[BIP113]: https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki
 
 Windows bug fix for corrupted UTXO database on unclean shutdowns
 ----------------------------------------------------------------
@@ -214,4 +214,4 @@ Thanks to everyone who directly contributed to this release:
 
 And those who contributed additional code review and/or security research.
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/fujicoin/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).

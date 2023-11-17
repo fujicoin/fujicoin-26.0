@@ -1,6 +1,6 @@
 Fujicoin Core version 0.10.4 is now available from:
 
-  <https://fujicoin.org/bin/fujicoin-core-0.10.4/>
+  <https://bitcoin.org/bin/bitcoin-core-0.10.4/>
 
 This is a new minor version release, bringing bug fixes, the BIP65
 (CLTV) consensus change, and relay policy preparation for BIP113. It is
@@ -95,7 +95,7 @@ version FIXME or any version from FIXME onward.
   will affect you at the pool operator’s discretion, which must be no
   later than BIP65 achieving its 951/1001 status.
 
-[BIP65]: https://github.com/fujicoin/bips/blob/master/bip-0065.mediawiki
+[BIP65]: https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki
 
 Windows bug fix for corrupted UTXO database on unclean shutdowns
 ----------------------------------------------------------------
@@ -169,4 +169,4 @@ Thanks to everyone who directly contributed to this release:
 
 And those who contributed additional code review and/or security research.
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/fujicoin/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/bitcoin/).

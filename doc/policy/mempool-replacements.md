@@ -14,7 +14,7 @@ other consensus and policy rules, each of the following conditions are met:
    signaling replaceability if any of its inputs have an nSequence number less than (0xffffffff - 1).
 
    *Rationale*: See [BIP125
-   explanation](https://github.com/fujicoin/bips/blob/master/bip-0125.mediawiki#motivation).
+   explanation](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki#motivation).
    Use the (`-mempoolfullrbf`) configuration option to allow transaction replacement without enforcement of the
    opt-in signaling rule.
 
@@ -67,7 +67,7 @@ This set of rules is similar but distinct from BIP125.
 * Opt-in full replace-by-fee (without inherited signaling) honoured in mempool and mining as of
   **v0.12.0** ([PR 6871](https://github.com/fujicoin/fujicoin/pull/6871)).
 
-* [BIP125](https://github.com/fujicoin/bips/blob/master/bip-0125.mediawiki) defined based on
+* [BIP125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki) defined based on
   Fujicoin Core implementation.
 
 * The incremental relay feerate used to calculate the required additional fees is distinct from
