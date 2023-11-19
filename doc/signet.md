@@ -59,7 +59,12 @@ Set the completed signetchallenge in fujicoin.conf and restart fujicoind. Then i
 Mining
 ======
 
-[Get fijicoin-signet-utility.zip](https://download.fujicoin.org/fujicoin-signet-utility/), then unzip it to the folder where you installed fujicoin.
+Please clone the fujicoin source code to the folder where you installed the fujicoin binaries and prepare miner and test_framework.
+
+    git clone https://github.com/fujicoin/fujicoin.git
+    cp -r fujicoin/test/functional/test_framework .
+    cp fujicoin/contrib/signet/miner .
+
 To mine the first block in your custom chain, you can run:
 
     cd to_fujicoind_folder
