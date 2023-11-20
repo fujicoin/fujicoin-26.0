@@ -30,31 +30,33 @@ Start fujicoind with signet: `./fujicoind -signet`
 
 Create a signetchallenge for your own network
 ---------------------------------------------
-Follow the steps below to get the Fujicoin legacy address and pubkey.
+Use something like the [BIP39 tool](https://iancoleman.io/bip39/) to obtain the legacy address, private key, and public key pair.
+Create signetcharrenge from this public key.
+You will need to import the private key into your wallet later.
 
-    ./fujicoind -regtest -daemon
-    ./fujicoin-cli -regtest createwallet "test" false false "" false false
-    ADDR=$(./fujicoin-cli -regtest getnewaddress "" "legacy")
-    echo $ADDR
-    PRIVKEY=$(./fujicoin-cli -regtest dumpprivkey $ADDR)
-    echo $PRIVKEY
-    ./fujicoin-cli -regtest getaddressinfo $ADDR | grep pubkey
-    # "pubkey": "THE_REAL_PUBKEY"
-    ./fujicoin-cli -regtest stop
+    For example:
+    ADDR=Wzjjb6AuENq846LV1EzSqVh4jrB22q26fC
+    PRIVKEY=Wuok1Ko8p72C6yMdXtbVRPyyJbKSmuKwobjrW76tLn86MahFHCpw
+    PUBKEY=03c0fad339e8a0641732400023180dd884f68075a51b1a05e4825501c3282ab606
 
-Your signetch allenge is below.
-
-    signetchallenge = 5121 + THE_REAL_PUBKEY + 51ae
-                    = 512102f8........4f2a51ae
+    ・signetchallenge = 5121 + PUBKEY + 51ae
+    CHALLENGE=512103c0fad339e8a0641732400023180dd884f68075a51b1a05e4825501c3282ab60651ae
 
 Mining environment settings
 ---------------------------
-Set the completed signetchallenge in fujicoin.conf and restart fujicoind. Then import the private key above.
+Start fujicoind.
 
-    ./fujicoind -signet
+    ./fujicoind -signet -daemon -signetchallenge=$CHALLENGE
     CLI="./fujicoin-cli -signet"
-    $CLI createwallet "signet" false false "" false false
-    $CLI -signet importprivkey $PRIVKEY
+    $CLI createwallet "signet"
+
+Create and import the private key descriptor.
+
+    ・Format of descriptor: multi(1, <priv_key>)#<checksum>
+    descriptor: multi(1, Wuok1Ko8p72C6yMdXtbVRPyyJbKSmuKwobjrW76tLn86MahFHCpw)
+    $CLI getdescriptorinfo "multi(1,Wuok1Ko8p72C6yMdXtbVRPyyJbKSmuKwobjrW76tLn86MahFHCpw)" | grep checksum
+    "checksum": "7uwn2a0x",
+    $CLI importdescriptors '[{"desc":"multi(1,Wuok1Ko8p72C6yMdXtbVRPyyJbKSmuKwobjrW76tLn86MahFHCpw)#7uwn2a0x","timestamp":"now","active":false,"internal":false}]'
 
 Mining
 ======
@@ -69,16 +71,16 @@ To mine the first block in your custom chain, you can run:
 
     cd to_fujicoind_folder
     CLI="./fujicoin-cli -signet"
-    MINER="python3 miner.py"
+    MINER="./miner"
     GRIND="./fujicoin-util grind"
-    ADDR="W4FVbSKsCyRcMPm8pAsdSsgSAtiXAyfovj"  # Note: Use legacy address
+    ADDRESS="X93kbwJctRMXzVXRX6MUxUeteYGbLFz5MR"  # Note: Use legacy address
 
 To mining block number 1, execute the following command. 
 This will mine a block with the current timestamp. 
 If you want to backdate the chain, you can give a different timestamp to --set-block-time. 
 A UnixTime 12 hours ago is recommended.
 
-    $MINER --cli="$CLI" generate --grind-cmd="$GRIND" --address="$ADDR" --set-block-time=-1 --nbits=1f0fffff
+    $MINER --cli="$CLI" generate --grind-cmd="$GRIND" --address="$ADDRESS" --nbits=1f0fffff --set-block-time=-1
 
 
 Using the --ongoing parameter will then cause the signet miner to create blocks indefinitely. 
